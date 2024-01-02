@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options } from '@mdx-js/esbuild/lib'
@@ -23,12 +24,14 @@ import remarkTableofContents from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
 // import '../app/monokai.css';
 import "@code-hike/mdx/dist/index.css"
-import Table from "../src/lib/mdx/components/table"
+import Table from "../src/lib/mdx/components/mdx/table"
 
-import {H1,H2,H3,H4,H5,H6} from  "../src/lib/mdx/components/h"
-import {P} from  "../src/lib/mdx/components/p"
-import Toc from "@/root/src/lib/mdx/components/toc";
+import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
+import {P} from "../src/lib/mdx/components/mdx/p"
+import Toc from "@/root/src/lib/mdx/components/mdx/toc";
 import { readdirSync, readFileSync } from "fs";
+import Header from "@/root/src/ui/layout/header/header";
+import {getData} from "@/root/src/ui/getData";
 
 
 
@@ -69,21 +72,30 @@ const components = {
 }
 
 export default function Post({ code, metadata,sourceMd }: PostProps) {
+
+
+
     // avoid recreating the component every render
     const Component = useMemo(() => getMDXComponent(code), [code])
 
-    console.log(sourceMd)
     let tocCom = Toc({content:sourceMd})
     return (
-        <div className="max-w-screen-lg px-10">
-            <div className="TEST">
-                {tocCom}
-            </div>
-            <div>
-                <div className="py-10"><span className="text-3xl font-bold">Fireworks Raises the Quality Bar with Function Calling Model and API Release</span></div>
-                <Component components={components}/>
+        <div className="grid justify-center" >
+            <Header/>
+            <div className="bg-white/100 px-10 grid  grid-cols-4 gap-4 justify-center">
+                <div className=""></div>
+                <div className="col-span-2">
+                    <div className="py-10"><span className="text-3xl font-bold">Fireworks Raises the Quality Bar with Function Calling Model and API Release</span></div>
+                    <Component components={components}/>
+                </div>
+                <div className="grid place-items-center h-screen font-medium">
+                    <div className="fixed">
+                        {tocCom}
+                    </div>
+                </div>
             </div>
         </div>
+
     )
 }
 
@@ -104,7 +116,7 @@ export default function Post({ code, metadata,sourceMd }: PostProps) {
 //     }
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // slug
 
     let tocElement
@@ -132,23 +144,17 @@ export async function getStaticProps() {
 
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? []),
-                // [
-                //     rehypeSlug,
-                //     {
-                //         properties: {
-                //             className: ['anchor'],
-                //         },
-                //     },
-                // ],
-                rehypeAutolinkHeadings,
-                // [toc, {
-                //     position: "afterend",
-                //     nav: true,
-                //     headings: ["h1", "h2"],     // Only include <h1> and <h2> headings in the Toc
-                //     cssClasses: {
-                //         toc: "page-outline",      // Change the CSS class for the Toc
-                //         link: "page-link",        // Change the CSS class for links in the Toc
-                //     }}],
+                [
+                    rehypeSlug,
+                    {
+                        properties: {
+                            className: ['anchor'],
+                        },
+                    },
+                ],
+               [ rehypeAutolinkHeadings,
+                   { behavior: "append"},
+               ],
                 remarkMdxCodeMeta,
 
 
@@ -163,9 +169,10 @@ export async function getStaticProps() {
     // post path
     const currentDirectory = process.cwd()
     const postPath = `${currentDirectory}/posts/hello.mdx`
-    const markdown = await bundleMDX({ file: postPath, ...options })
-    const { code, frontmatter: metadata } = markdown
     const sourceMd =  fs.readFileSync(postPath,"utf8")
+
+    const markdown = await bundleMDX({ source: sourceMd, ...options })
+    const { code, frontmatter: metadata } = markdown
     return {
         props: {
             code,
@@ -174,3 +181,5 @@ export async function getStaticProps() {
         },
     }
 }
+
+
