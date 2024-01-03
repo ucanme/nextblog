@@ -82,14 +82,15 @@ export default function Post({ code, metadata,sourceMd }: PostProps) {
     return (
         <div className="grid justify-center" >
             <Header/>
-            <div className="bg-white/100 px-10 grid  grid-cols-4 gap-4 justify-center">
+            <div className="bg-white/100 px-10 grid  grid-cols-4 md:grid-cols-1 gap-4 justify-center">
                 <div className=""></div>
                 <div className="col-span-2">
                     <div className="py-10"><span className="text-3xl font-bold">Fireworks Raises the Quality Bar with Function Calling Model and API Release</span></div>
                     <Component components={components}/>
                 </div>
-                <div className="grid place-items-center h-screen font-medium">
-                    <div className="fixed">
+                <div className="md:hidden sm:hidden xl:hidden grid place-items-center h-screen font-medium">
+                    <div className="xl:text-blue-600/0 text-9xl fixed">
+                        <div>Nice</div>
                         {tocCom}
                     </div>
                 </div>
