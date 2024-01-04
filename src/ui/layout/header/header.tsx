@@ -8,7 +8,7 @@ export default function Header() {
         return (
             <Navbar isBordered className="bg-white/100">
                 <NavbarContent justify="start">
-                    <NavbarBrand className="mr-4">
+                    <NavbarBrand className="pr-4">
                         <Link href="/">
                             <AcmeLogo />
                             <p className="hidden sm:block font-bold text-inherit">首页</p>
