@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="grid grid-col">
       <Header />
-        <div className="grid justify-center mt-2">
+        <div className="grid justify-center mt-2 sm:p-10">
         {/*<div className="grid grid-cols-3 gap-10   ">*/}
         {/*    <Card className="py-4 border-0" >*/}
         {/*        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">*/}
