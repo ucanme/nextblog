@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
-import  {Options } from '@mdx-js/esbuild/lib'
+import  {Options} from '@mdx-js/esbuild/lib'
 import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
 import '../app/globals.css'
@@ -18,12 +18,10 @@ import rehypeSlug from 'rehype-slug'
 
 import remarkSlug from 'remark-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { remarkCodeHike } from "@code-hike/mdx";
 import remarkSmartypants from '@silvenon/remark-smartypants'
 import remarkTableofContents from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
 // import '../app/monokai.css';
-import "@code-hike/mdx/dist/index.css"
 import Table from "../src/lib/mdx/components/mdx/table"
 
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
@@ -128,7 +126,7 @@ export async function getServerSideProps() {
             options.remarkPlugins = [
                 ...(options.remarkPlugins ?? []),
                 remarkGfm,
-                remarkCodeHike,
+                // remarkCodeHike,
                 // add id to headings
                 // add links to headings
                 // remarkSlug,
@@ -161,7 +159,6 @@ export async function getServerSideProps() {
 
                 // rehypeSyntaxHighlighting
             ];
-            options.jsx = false
 
             return options
         },
@@ -171,7 +168,7 @@ export async function getServerSideProps() {
     const currentDirectory = process.cwd()
     const postPath = `${currentDirectory}/posts/hello.mdx`
     const sourceMd =  fs.readFileSync(postPath,"utf8")
-
+    console.log(sourceMd)
     const markdown = await bundleMDX({ source: sourceMd, ...options })
     const { code, frontmatter: metadata } = markdown
     return {
