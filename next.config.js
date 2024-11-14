@@ -7,3 +7,7 @@ module.exports = {
     },
     distDir: "build"
 }
+
+const nextConfig= {
+    swcMinify: false
+}
