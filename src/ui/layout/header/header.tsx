@@ -33,11 +33,11 @@ export default function Header() {
                                 专题
                             </Link>
                         </NavbarItem>
-                        {/*<NavbarItem>*/}
-                        {/*    <Link color="foreground" href="#">*/}
-                        {/*        工具*/}
-                        {/*    </Link>*/}
-                        {/*</NavbarItem>*/}
+                        <NavbarItem>
+                            <Link color="foreground" href="#">
+                                工具
+                            </Link>
+                        </NavbarItem>
                         {/*<NavbarItem>*/}
                         {/*    <Link color="foreground" href="#">*/}
                         {/*        关于*/}
