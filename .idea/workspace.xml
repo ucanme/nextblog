@@ -57,7 +57,7 @@
       <window_info id="npm" side_tool="true" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.096641935" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -65,7 +65,7 @@
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Find" />
-      <window_info active="true" anchor="bottom" x="1256" y="1074" width="1304" height="128" id="Terminal" order="0" side_tool="true" visible="true" weight="0.20594159" />
+      <window_info active="true" anchor="bottom" x="1256" y="1074" width="1304" height="128" id="Terminal" order="0" side_tool="true" visible="true" weight="0.26453698" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Services" order="2" />
       <window_info anchor="bottom" id="Problems" order="3" />
@@ -95,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731585248103</updated>
       <workItem from="1731585249109" duration="7513000" />
-      <workItem from="1731668673400" duration="793000" />
+      <workItem from="1731668673400" duration="3236000" />
     </task>
     <servers />
   </component>

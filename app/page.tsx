@@ -1,3 +1,4 @@
+"use client";
 import Header from "../src/ui/layout/header/header"
 import "./globals.css"
 import Link from "next/link";
@@ -5,8 +6,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="grid grid-col grid justify-center">
-        <Header />
+    <div className="grid grid-col justify-center">
+            <Header />
         <div className="grid justify-center sm:p-5">
              <div className="bg-white">
                  <Link href="/hello" className="pl-3">
@@ -46,10 +47,10 @@ export default function Home() {
                     <span>2023-10-01</span>
                 </div>
             </Link>
-            
 
-</div>
+
+            </div>
         </div>
-    </main>
+    </div>
   )
 }

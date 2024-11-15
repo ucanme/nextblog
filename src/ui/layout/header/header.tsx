@@ -1,4 +1,5 @@
 "use client";
+
 import "../../../../app/globals.css"
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
