@@ -5,9 +5,9 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="grid grid-col justify-center">
-            <Header />
-        <div className="grid justify-center sm:p-5">
+    <div className="flex-col  justify-center">
+        <Header />
+        <div className="flex justify-center">
              <div className="bg-white">
                  <Link href="/hello" className="pl-3">
                 <div className="grid pt-5">
