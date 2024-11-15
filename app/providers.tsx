@@ -5,10 +5,8 @@ import {NextUIProvider} from '@nextui-org/react'
 
 export function Providers({children}: { children: React.ReactNode }) {
     return (
-        // <NextUIProvider className="h-full" >
-            <div>
+        <NextUIProvider className="grid justify-center" >
                 {children}
-            </div>
-        // </NextUIProvider>
+         </NextUIProvider>
     )
 }

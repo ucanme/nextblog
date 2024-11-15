@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="grid justify-center">
+    <div className="">
         <Header />
         <div className="flex justify-center">
              <div className="bg-white">

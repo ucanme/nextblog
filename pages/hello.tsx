@@ -78,7 +78,7 @@ export default function Post({ code, metadata,sourceMd }: PostProps) {
 
     let tocCom = Toc({content:sourceMd})
     return (
-        <div className="grid justify-center" >
+        <div className="" >
             <Header/>
             <div className="bg-white/100 px-10 grid  sm:p-10 lg:grid-cols-4 xl:grid-cols-4 sm:grid-cols-1 gap-4 justify-center">
                 <div className=""></div>
