@@ -1,12 +1,11 @@
 import Header from "../src/ui/layout/header/header"
 import "./globals.css"
 import Link from "next/link";
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
 import React from "react";
 
 export default function Home() {
   return (
-    <main className="grid grid-col">
+    <main className="grid grid-col grid justify-center">
         <Header />
         <div className="grid justify-center sm:p-5">
              <div className="bg-white">
