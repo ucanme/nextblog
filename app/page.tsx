@@ -1,4 +1,3 @@
-"use client";
 import Header from "../src/ui/layout/header/header"
 import "./globals.css"
 import Link from "next/link";
@@ -47,8 +46,6 @@ export default function Home() {
                     <span>2023-10-01</span>
                 </div>
             </Link>
-
-
             </div>
         </div>
     </div>

@@ -35,11 +35,6 @@ export default function Header() {
                         </NavbarItem>
                         <NavbarItem>
                             <Link color="foreground" href="#">
-                                工具
-                            </Link>
-                        </NavbarItem>
-                        <NavbarItem>
-                            <Link color="foreground" href="#">
                                 关于
                             </Link>
                         </NavbarItem>
