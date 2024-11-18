@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
+
     <list default="true" id="bebf4aaa-e4da-409b-a64b-8b454ed472a2" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
@@ -12,9 +12,7 @@
       <change beforePath="$PROJECT_DIR$/pages/hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hello.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/hello.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/posts/hello.mdx" afterDir="false" />
     </list>
-=======
     <list default="true" id="bebf4aaa-e4da-409b-a64b-8b454ed472a2" name="更改" comment="" />
->>>>>>> f0f941819f9b4decf286fd58b2eb0ddefd675453
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
