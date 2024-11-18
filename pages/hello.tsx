@@ -5,8 +5,9 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options} from '@mdx-js/esbuild/lib'
 import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
-import '../app/globals.css'
+// import '../app/globals.css'
 // mdx plugins
+import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
 import remarkMdxCodeMeta from 'rehype-mdx-code-props';
 
@@ -21,9 +22,9 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkSmartypants from '@silvenon/remark-smartypants'
 import remarkTableofContents from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
-// import '../app/monokai.css';
-import Table from "../src/lib/mdx/components/mdx/table"
 
+import Table from "../src/lib/mdx/components/mdx/table"
+const { remarkCodeHike } = require("@code-hike/mdx")
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
 import {P} from "../src/lib/mdx/components/mdx/p"
 import Toc from "@/root/src/lib/mdx/components/mdx/toc";
@@ -137,7 +138,7 @@ export async function getServerSideProps() {
                 [remarkTableofContents, { tight: true }],
                 // remove paragraph around images
                 remarkUnwrapImages,
-
+                remarkCodeHike
             ]
 
 

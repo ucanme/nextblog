@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bebf4aaa-e4da-409b-a64b-8b454ed472a2" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/providers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/hello.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hello.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/hello.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/posts/hello.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <window_info id="npm" side_tool="true" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.096641935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21608946" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -66,7 +67,7 @@
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Find" />
-      <window_info active="true" anchor="bottom" x="1256" y="1074" width="1304" height="128" id="Terminal" order="0" side_tool="true" visible="true" weight="0.26453698" />
+      <window_info active="true" anchor="bottom" x="1256" y="1074" width="1304" height="128" id="Terminal" order="0" side_tool="true" visible="true" weight="0.5322256" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Services" order="2" />
       <window_info anchor="bottom" id="Problems" order="3" />
@@ -97,6 +98,7 @@
       <updated>1731585248103</updated>
       <workItem from="1731585249109" duration="7513000" />
       <workItem from="1731668673400" duration="3236000" />
+      <workItem from="1731944298571" duration="2151000" />
     </task>
     <servers />
   </component>
