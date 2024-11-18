@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bebf4aaa-e4da-409b-a64b-8b454ed472a2" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/layout/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/layout/header/header.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="bebf4aaa-e4da-409b-a64b-8b454ed472a2" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +95,7 @@
       <updated>1731585248103</updated>
       <workItem from="1731585249109" duration="7513000" />
       <workItem from="1731668673400" duration="3236000" />
-      <workItem from="1731936110700" duration="2282000" />
+      <workItem from="1731936110700" duration="2558000" />
     </task>
     <servers />
   </component>
