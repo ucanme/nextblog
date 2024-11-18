@@ -6,7 +6,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className=" grid grid-cols-1 justify-center">
-        <Header />
+        <Header className="p-0" />
         <div className="flex justify-center">
              <div className="bg-white">
                  <Link href="/hello" className="pl-3">
