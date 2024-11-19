@@ -7,7 +7,7 @@ import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
 // import '../app/globals.css'
 // mdx plugins
-import "@code-hike/mdx/dist/index.css"
+const { remarkCodeHike } = require("@code-hike/mdx")
 import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
 import remarkMdxCodeMeta from 'rehype-mdx-code-props';
@@ -25,6 +25,7 @@ import remarkTableofContents from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
 
 import Table from "../src/lib/mdx/components/mdx/table"
+
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
 import {P} from "../src/lib/mdx/components/mdx/p"
 import Toc from "@/root/src/lib/mdx/components/mdx/toc";
