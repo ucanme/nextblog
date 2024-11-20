@@ -7,7 +7,7 @@ module.exports = {
     },
     distDir: "build"
 }
-
+/** @type {import('next').NextConfig} */
 const nextConfig= {
     serverExternalPackages: ['@code-hike/mdx'],
     swcMinify: false,
