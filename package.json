@@ -56,6 +56,6 @@
     "typescript": "^5"
   },
   "optionalDependencies": {
-    "@esbuild/linux-x64":"0.24.0"
+    "@esbuild/linux-x64":"0.19.8`"
   }
 }
