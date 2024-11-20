@@ -9,5 +9,8 @@ module.exports = {
 }
 
 const nextConfig= {
+    serverExternalPackages: ['@code-hike/mdx'],
     swcMinify: false
 }
+
+module.exports = nextConfig
