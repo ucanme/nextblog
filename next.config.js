@@ -10,7 +10,13 @@ module.exports = {
 
 const nextConfig= {
     serverExternalPackages: ['@code-hike/mdx'],
-    swcMinify: false
+    swcMinify: false,
+    reactStrictMode: true,
+    compiler: {
+        // Enables the styled-components SWC transform
+        styledComponents: true
+    },
+    distDir: "build"
 }
 
 module.exports = nextConfig
