@@ -10,7 +10,7 @@ import fs from 'fs'
 const { remarkCodeHike } = require("@code-hike/mdx")
 import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
-import remarkMdxCodeMeta from 'rehype-mdx-code-props';
+
 
 // import rehypeCodeTitles from 'rehype-code-titles'
 // import rehypeImagePlaceholder from 'rehype-image-placeholder'
@@ -138,8 +138,7 @@ export async function getServerSideProps() {
                 [remarkTableofContents, { tight: true }],
                 // remove paragraph around images
                 remarkUnwrapImages,
-                [
-                    remarkCodeHike,{
+                [remarkCodeHike,{
                     lineNumbers: false,
                     showCopyButton: false,
                     theme: "dark-plus",
@@ -149,6 +148,7 @@ export async function getServerSideProps() {
                     autoLink: false,
                 }],
             ],
+
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? []),
                 [
