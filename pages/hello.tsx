@@ -162,8 +162,6 @@ export async function getServerSideProps() {
                [ rehypeAutolinkHeadings,
                    { behavior: "append"},
                ],
-                remarkMdxCodeMeta,
-
 
                 // rehypeSyntaxHighlighting
             ];
