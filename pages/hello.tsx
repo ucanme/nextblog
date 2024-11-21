@@ -147,7 +147,7 @@ export async function getServerSideProps() {
                     autoImport: true,
                     autoLink: false,
                 }],
-            ],
+            ];
 
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? []),
