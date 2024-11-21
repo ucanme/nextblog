@@ -7,7 +7,7 @@ import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
 // import '../app/globals.css'
 // mdx plugins
-const { remarkCodeHike } = require("@code-hike/mdx")
+import { remarkCodeHike } from "@code-hike/mdx"
 import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
 
