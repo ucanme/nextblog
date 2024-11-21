@@ -123,7 +123,6 @@ export async function getServerSideProps() {
     let tocElement
     const options = {
 
-
         mdxOptions(options: Options) {
             options.remarkPlugins = [
                 ...(options.remarkPlugins ?? []),
@@ -139,8 +138,17 @@ export async function getServerSideProps() {
                 [remarkTableofContents, { tight: true }],
                 // remove paragraph around images
                 remarkUnwrapImages,
-                remarkCodeHike
+                [remarkCodeHike,{
+                    lineNumbers: false,
+                    showCopyButton: false,
+                    theme: "dark-plus",
+                    skipLanguages: ["mermaid"],
+                    staticMediaQuery: "not screen, (max-width: 768px)",
+                    autoImport: true,
+                    autoLink: false,
+                }],
             ]
+
 
 
             options.rehypePlugins = [

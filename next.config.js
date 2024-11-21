@@ -9,7 +9,6 @@ module.exports = {
 }
 /** @type {import('next').NextConfig} */
 const nextConfig= {
-    serverExternalPackages: ['@code-hike/mdx'],
     swcMinify: false,
     reactStrictMode: true,
     compiler: {
