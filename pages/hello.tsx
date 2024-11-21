@@ -138,7 +138,8 @@ export async function getServerSideProps() {
                 [remarkTableofContents, { tight: true }],
                 // remove paragraph around images
                 remarkUnwrapImages,
-                [remarkCodeHike,{
+                [
+                    remarkCodeHike,{
                     lineNumbers: false,
                     showCopyButton: false,
                     theme: "dark-plus",
@@ -147,10 +148,7 @@ export async function getServerSideProps() {
                     autoImport: true,
                     autoLink: false,
                 }],
-            ]
-
-
-
+            ],
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? []),
                 [
