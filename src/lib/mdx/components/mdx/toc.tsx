@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import {TYPE} from "@formatjs/icu-messageformat-parser";
 import Link from 'next/link'
 type TocHead = {
     text: string
