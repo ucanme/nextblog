@@ -17,24 +17,17 @@ import remarkGfm from 'remark-gfm'
 import rehypeCodeTitles  from 'rehype-code-titles'
 import toc from '@jsdevtools/rehype-toc'
 import rehypeSlug from 'rehype-slug'
-
-import remarkSlug from 'remark-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkSmartypants from '@silvenon/remark-smartypants'
 import remarkTableofContents from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
-
 import Table from "../src/lib/mdx/components/mdx/table"
-
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
 import {P} from "../src/lib/mdx/components/mdx/p"
 import Toc from "@/root/src/lib/mdx/components/mdx/toc";
 import { readdirSync, readFileSync } from "fs";
 import Header from "@/root/src/ui/layout/header/header";
 import {getData} from "@/root/src/ui/getData";
-
-
-
 export interface Post {
     category: string
     description: string
@@ -126,7 +119,6 @@ export async function getServerSideProps() {
         mdxOptions(options: Options) {
             options.remarkPlugins = [
                 ...(options.remarkPlugins ?? []),
-                remarkGfm,
                 // remarkCodeHike,
                 // add id to headings
                 // add links to headings

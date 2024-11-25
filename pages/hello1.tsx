@@ -1,53 +1,20 @@
-import Header from "../src/ui/layout/header/header"
-import "../app/globals.css"
-import Link from "next/link";
-import React from "react";
+// components/mdx-remote.js
+import { MDXRemote, MDXRemoteProps} from 'next-mdx-remote/rsc'
+import {JSX} from 'react'
 
-export default function Home() {
+const components = {
+    h1: (props: JSX.IntrinsicAttributes & MDXRemoteProps) => (
+        <h1 {...props} className="large-text">
+            {props}
+        </h1>
+    ),
+}
+
+export function CustomMDX(props) {
     return (
-        <div className="grid justify-center">
-            <Header />
-            <div className="">
-                <div className="bg-white">
-                    <Link href="/hello" className="pl-3">
-                        <div className="grid pt-5">
-                            <span className="text-base	 font-bold inline-block">golang单元测试教程</span>
-                            <span className="inline-block  text-sm	pt-2 tracking-normal">具体讲解go test用法, gomonkey、goconvey的使用，以及单元测试的书写，单元测试覆盖率的计算等, 以及常见文件的解决，希望能够帮你更快的了解和学习</span>
-                        </div>
-                        <div className="text-xs font-sans">
-                            <span>2023-10-01</span>
-                        </div>
-                    </Link>
-
-                    <Link href="/hello" className="pl-3">
-                        <div className="grid pt-5">
-                            <span className="text-base	 font-bold inline-block">golang单元测试教程</span>
-                            <span className="inline-block  text-sm	pt-2 tracking-normal">具体讲解go test用法, gomonkey、goconvey的使用，以及单元测试的书写，单元测试覆盖率的计算等, 以及常见文件的解决，希望能够帮你更快的了解和学习</span>
-                        </div>
-                        <div className="text-xs font-sans">
-                            <span>2023-10-01</span>
-                        </div>
-                    </Link>
-                    <Link href="/hello" className="pl-3">
-                        <div className="grid pt-5">
-                            <span className="text-base	 font-bold inline-block">golang单元测试教程</span>
-                            <span className="inline-block  text-sm	pt-2 tracking-normal">具体讲解go test用法, gomonkey、goconvey的使用，以及单元测试的书写，单元测试覆盖率的计算等, 以及常见文件的解决，希望能够帮你更快的了解和学习</span>
-                        </div>
-                        <div className="text-xs font-sans">
-                            <span>2023-10-01</span>
-                        </div>
-                    </Link>
-                    <Link href="/hello" className="pl-3">
-                        <div className="grid pt-5">
-                            <span className="text-base	 font-bold inline-block">golang单元测试教程</span>
-                            <span className="inline-block  text-sm	pt-2 tracking-normal">具体讲解go test用法, gomonkey、goconvey的使用，以及单元测试的书写，单元测试覆盖率的计算等, 以及常见文件的解决，希望能够帮你更快的了解和学习</span>
-                        </div>
-                        <div className="text-xs font-sans">
-                            <span>2023-10-01</span>
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </div>
+        <MDXRemote
+            {...props}
+            components={{ ...components, ...(props.components || {}) }}
+        />
     )
 }
