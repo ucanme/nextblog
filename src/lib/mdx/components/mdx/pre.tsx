@@ -1,6 +1,5 @@
 import {Post} from "@/root/pages/hello";
 import React from "react";
-import {Pos} from "@jridgewell/gen-mapping/dist/types/types";
 interface PostProps{
     filename: string
     title: string
