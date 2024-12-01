@@ -15,7 +15,7 @@ const nextConfig= {
         // Enables the styled-components SWC transform
         styledComponents: true
     },
-    distDir: "build"
+    distDir: "build",
 }
 
 module.exports = nextConfig

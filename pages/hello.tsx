@@ -181,6 +181,7 @@ export async function getServerSideProps() {
                 autoLink: false,
             }]]
             options.rehypePlugins = [...(options.rehypePlugins ?? []), ]
+            options.providerImportSource = '@code-hike/mdx/dist'
 
             return options
         } })
