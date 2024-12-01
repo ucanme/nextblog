@@ -1,22 +1,17 @@
-'use client';
 import { useMemo } from 'react'
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options,ProcessorOptions} from '@mdx-js/esbuild/lib/index'
-import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
 import "@code-hike/mdx/dist/index.css"
-import remarkGfm from 'remark-gfm'
 
-
-// // import rehypeCodeTitles from 'rehype-code-titles'
+import rehypeCodeTitles from 'rehype-code-titles'
 // // import rehypeImagePlaceholder from 'rehype-image-placeholder'
 // import rehypeCodeTitles  from 'rehype-code-titles'
-// import toc from '@jsdevtools/rehype-toc'
-// import rehypeSlug from 'rehype-slug'
+import toc from '@jsdevtools/rehype-toc'
+import rehypeSlug from 'rehype-slug'
 // import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 // import remarkSmartypants from '@silvenon/remark-smartypants'
-// import remarkTableofContents from 'remark-toc'
 // import remarkUnwrapImages from 'remark-unwrap-images'
 import Table from "../src/lib/mdx/components/mdx/table"
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
@@ -25,11 +20,15 @@ import Toc from "@/root/src/lib/mdx/components/mdx/toc";
 import { readdirSync, readFileSync } from "fs";
 import Header from "@/root/src/ui/layout/header/header";
 import {getData} from "@/root/src/ui/getData";
+import remarkGfm from 'remark-gfm'
 
 // import '../app/globals.css'
 // mdx plugins
 //import { remarkCodeHike } from "@code-hike/mdx"
 import {remarkCodeHike} from "@code-hike/mdx";
+import remarkParse from "remark-parse";
+import remarkSlug from "remark-slug";
+import remarkToc from "remark-toc";
 
 export interface Post {
     category: string
@@ -173,11 +172,30 @@ export async function getStaticProps() {
             // this is the recommended way to add custom remark/rehype plugins:
             // The syntax might look weird, but it protects you in case we add/remove
             // plugins in the future.
-            options.remarkPlugins = [...(options.remarkPlugins ?? []), [remarkCodeHike,{
-                lineNumbers: true,
-                showCopyButton: true,
+                options.remarkPlugins = [
+                    ...(options.remarkPlugins ?? []),
+                    remarkGfm,
+                    [remarkToc,{ tight: true }],
+                    remarkSlug,
+                    [
+                        remarkCodeHike,
+                        {
+                        lineNumbers: true,
+                        showCopyButton: true,
             }]]
-            options.rehypePlugins = [...(options.rehypePlugins ?? []), ]
+            options.rehypePlugins = [
+                ...(options.rehypePlugins ?? [
+                            [
+                                rehypeSlug,
+                                {
+                                    properties: {
+                                        className: ['anchor'],
+                                    },
+                                },
+                            ],
+
+            ]),
+            ]
             return options
         } })
     const { code } = markdown

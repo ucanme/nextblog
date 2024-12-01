@@ -8,6 +8,7 @@ const StyledTable = styled.table`
   border-collapse: collapse;
   th, td {
     padding: 10px;
+      border: 1px solid #ccc;
   }
 
    th, td{
@@ -18,11 +19,11 @@ const StyledTable = styled.table`
   }
    th{
     background-color: #FFFFFF;
-     font-weight: bold;
-    border-top:none;
+       font-weight: bold;
+    border-top:1px solid #ccc;
   }
    td:first-child,.custom_tb th:first-child{
-    border-left: none;
+    border-left: 1px solid #ccc;
   }
    th:first-child{
     border-radius: 6px 0 0 0;
@@ -42,6 +43,7 @@ interface TableProps {
     children: ReactNode
 }
 export default function Table(props: DetailedHTMLProps<TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>) {
+    console.log((props.children),'TABLE')
     return (
         <div className="px-3">
             <StyledTable>
