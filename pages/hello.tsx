@@ -1,6 +1,4 @@
-'use client';
 import { useMemo } from 'react'
-
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options,ProcessorOptions} from '@mdx-js/esbuild/lib/index'
