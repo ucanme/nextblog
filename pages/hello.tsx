@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
-import  {Options} from '@mdx-js/esbuild/lib'
+import  {Options,ProcessorOptions} from '@mdx-js/esbuild/lib/index'
 import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
 // import '../app/globals.css'
@@ -113,61 +113,77 @@ export default function Post({ code, metadata,sourceMd }: PostProps) {
 export async function getServerSideProps() {
     // slug
 
-    let tocElement
-    const options = {
-
-        mdxOptions(options: Options) {
-            options.remarkPlugins = [
-                ...(options.remarkPlugins ?? []),
-                // remarkCodeHike,
-                // add id to headings
-                // add links to headings
-                // remarkSlug,
-                // smart typographic punctuation like real quotes
-                remarkSmartypants,
-                // generates table of contents from headings
-                // `tight` removes <p> from <li> when nested
-                [remarkTableofContents, { tight: true }],
-                // remove paragraph around images
-                remarkUnwrapImages,
-                [remarkCodeHike,{
-                    lineNumbers: false,
-                    showCopyButton: false,
-                    theme: "dark-plus",
-                    skipLanguages: ["mermaid"],
-                    staticMediaQuery: "not screen, (max-width: 768px)",
-                    autoImport: true,
-                    autoLink: false,
-                }],
-            ];
-
-            options.rehypePlugins = [
-                ...(options.rehypePlugins ?? []),
-                [
-                    rehypeSlug,
-                    {
-                        properties: {
-                            className: ['anchor'],
-                        },
-                    },
-                ],
-               [ rehypeAutolinkHeadings,
-                   { behavior: "append"},
-               ],
-
-                // rehypeSyntaxHighlighting
-            ];
-
-            return options
-        },
-    }
+    // let tocElement
+    // const options = {
+    //
+    //     mdxOptions(options: Options ) {
+    //         options.remarkPlugins = [
+    //             ...(options.remarkPlugins ?? []),
+    //             // remarkCodeHike,
+    //             // add id to headings
+    //             // add links to headings
+    //             // remarkSlug,
+    //             // smart typographic punctuation like real quotes
+    //             remarkSmartypants,
+    //             // generates table of contents from headings
+    //             // `tight` removes <p> from <li> when nested
+    //             [remarkTableofContents, { tight: true }],
+    //             // remove paragraph around images
+    //             remarkUnwrapImages,
+    //             [remarkCodeHike,{
+    //                 lineNumbers: false,
+    //                 showCopyButton: false,
+    //                 theme: "dark-plus",
+    //                 skipLanguages: ["mermaid"],
+    //                 staticMediaQuery: "not screen, (max-width: 768px)",
+    //                 autoImport: true,
+    //                 autoLink: false,
+    //             }],
+    //         ];
+    //
+    //         options.rehypePlugins = [
+    //             ...(options.rehypePlugins ?? []),
+    //             [
+    //                 rehypeSlug,
+    //                 {
+    //                     properties: {
+    //                         className: ['anchor'],
+    //                     },
+    //                 },
+    //             ],
+    //            [ rehypeAutolinkHeadings,
+    //                { behavior: "append"},
+    //            ],
+    //
+    //             // rehypeSyntaxHighlighting
+    //         ];
+    //
+    //         return options
+    //     },
+    // }
 
     // post path
     const currentDirectory = process.cwd()
     const postPath = `${currentDirectory}/posts/hello.mdx`
     const sourceMd =  fs.readFileSync(postPath,"utf8")
     console.log(sourceMd)
-    const markdown = await bundleMDX({ source: sourceMd, ...options })
+    const markdown = await bundleMDX({ source: sourceMd, mdxOptions(options) {
+            // this is the recommended way to add custom remark/rehype plugins:
+            // The syntax might look weird, but it protects you in case we add/remove
+            // plugins in the future.
+            options.remarkPlugins = [...(options.remarkPlugins ?? []), [remarkCodeHike,{
+                lineNumbers: false,
+                showCopyButton: false,
+                theme: "dark-plus",
+                skipLanguages: ["mermaid"],
+                staticMediaQuery: "not screen, (max-width: 768px)",
+                autoImport: true,
+                autoLink: false,
+            }]]
+            options.rehypePlugins = [...(options.rehypePlugins ?? []), ]
+
+            return options
+        } })
     const { code, frontmatter: metadata } = markdown
     return {
         props: {
