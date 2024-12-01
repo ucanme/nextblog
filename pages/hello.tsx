@@ -43,7 +43,6 @@ export interface Post {
 
 interface PostProps {
     code: string
-    metadata: Post
     sourceMd: string
 }
 
@@ -64,7 +63,7 @@ const components = {
     p: P,
 }
 
-export default function Post({ code, metadata,sourceMd }: PostProps) {
+export default function Post({ code,sourceMd }: PostProps) {
 
 
 
@@ -185,11 +184,10 @@ export async function getServerSideProps() {
 
             return options
         } })
-    const { code, frontmatter: metadata } = markdown
+    const { code } = markdown
     return {
         props: {
             code,
-            metadata,
             sourceMd,
         },
     }
