@@ -1,5 +1,6 @@
-import React, {DetailedHTMLProps, HTMLAttributes} from "react";
+"use client";
 import { CH } from "@code-hike/mdx/dist/components.esm.mjs";
+import React, {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export  function P(props:DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>){
     return (
