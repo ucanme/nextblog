@@ -167,7 +167,7 @@ export async function getServerSideProps() {
     const postPath = `${currentDirectory}/posts/hello.mdx`
     const sourceMd =  fs.readFileSync(postPath,"utf8")
     console.log(sourceMd)
-    const markdown = await bundleMDX({ source: sourceMd, mdxOptions(options) {
+    const markdown = await bundleMDX({ source: sourceMd.toString(), mdxOptions(options) {
             // this is the recommended way to add custom remark/rehype plugins:
             // The syntax might look weird, but it protects you in case we add/remove
             // plugins in the future.
