@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-    reactStrictMode: true,
-    compiler: {
-        // Enables the styled-components SWC transform
-        styledComponents: true
-    },
-    distDir: "build"
-}
-/** @type {import('next').NextConfig} */
 const nextConfig= {
     swcMinify: false,
     reactStrictMode: true,
