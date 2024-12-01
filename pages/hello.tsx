@@ -5,9 +5,6 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options,ProcessorOptions} from '@mdx-js/esbuild/lib/index'
 import rehypePrism from 'rehype-prism-plus'
 import fs from 'fs'
-// import '../app/globals.css'
-// mdx plugins
-import { remarkCodeHike } from "@code-hike/mdx"
 import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
 
@@ -28,6 +25,12 @@ import Toc from "@/root/src/lib/mdx/components/mdx/toc";
 import { readdirSync, readFileSync } from "fs";
 import Header from "@/root/src/ui/layout/header/header";
 import {getData} from "@/root/src/ui/getData";
+
+// import '../app/globals.css'
+// mdx plugins
+//import { remarkCodeHike } from "@code-hike/mdx"
+import {remarkCodeHike} from "@code-hike/mdx";
+
 export interface Post {
     category: string
     description: string
@@ -109,7 +112,7 @@ export default function Post({ code,sourceMd }: PostProps) {
 //     }
 // }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     // slug
 
     // let tocElement
