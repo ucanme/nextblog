@@ -171,13 +171,8 @@ export async function getServerSideProps() {
             // The syntax might look weird, but it protects you in case we add/remove
             // plugins in the future.
             options.remarkPlugins = [...(options.remarkPlugins ?? []), [remarkCodeHike,{
-                lineNumbers: false,
-                showCopyButton: false,
-                theme: "dark-plus",
-                skipLanguages: ["mermaid"],
-                staticMediaQuery: "not screen, (max-width: 768px)",
-                autoImport: true,
-                autoLink: false,
+                lineNumbers: true,
+                showCopyButton: true,
             }]]
             options.rehypePlugins = [...(options.rehypePlugins ?? []), ]
             return options

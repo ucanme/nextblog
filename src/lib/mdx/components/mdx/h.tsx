@@ -12,7 +12,6 @@ export  function H2(props:DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, 
 }
 
 export  function H3(props:DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>){
-    console.log(props.id)
     return (
         <h3 className="font-bold text-lg py-1" id={props.id} >{props.children}</h3>
     )
