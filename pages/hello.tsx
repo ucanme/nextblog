@@ -12,15 +12,15 @@ import "@code-hike/mdx/dist/index.css"
 import remarkGfm from 'remark-gfm'
 
 
-// import rehypeCodeTitles from 'rehype-code-titles'
-// import rehypeImagePlaceholder from 'rehype-image-placeholder'
-import rehypeCodeTitles  from 'rehype-code-titles'
-import toc from '@jsdevtools/rehype-toc'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import remarkSmartypants from '@silvenon/remark-smartypants'
-import remarkTableofContents from 'remark-toc'
-import remarkUnwrapImages from 'remark-unwrap-images'
+// // import rehypeCodeTitles from 'rehype-code-titles'
+// // import rehypeImagePlaceholder from 'rehype-image-placeholder'
+// import rehypeCodeTitles  from 'rehype-code-titles'
+// import toc from '@jsdevtools/rehype-toc'
+// import rehypeSlug from 'rehype-slug'
+// import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+// import remarkSmartypants from '@silvenon/remark-smartypants'
+// import remarkTableofContents from 'remark-toc'
+// import remarkUnwrapImages from 'remark-unwrap-images'
 import Table from "../src/lib/mdx/components/mdx/table"
 import {H1,H2,H3,H4,H5,H6} from "../src/lib/mdx/components/mdx/h"
 import {P} from "../src/lib/mdx/components/mdx/p"
