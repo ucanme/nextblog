@@ -111,7 +111,7 @@ export default function Post({ code,sourceMd }: PostProps) {
 //     }
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // slug
 
     // let tocElement
@@ -177,12 +177,13 @@ export async function getStaticProps() {
                     remarkGfm,
                     [remarkToc,{ tight: true }],
                     remarkSlug,
-                    [
-                        //remarkCodeHike,
-                        {
-                        lineNumbers: true,
-                        showCopyButton: true,
-            }]]
+            //         [
+            //             remarkCodeHike,
+            //             {
+            //             lineNumbers: true,
+            //             showCopyButton: true,
+            // }]
+               ]
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? [
                             [
