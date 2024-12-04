@@ -111,7 +111,7 @@ export default function Post({ code,sourceMd }: PostProps) {
 //     }
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // slug
 
     // let tocElement
