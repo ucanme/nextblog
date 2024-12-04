@@ -111,7 +111,7 @@ export default function Post({ code,sourceMd }: PostProps) {
 //     }
 // }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     // slug
 
     // let tocElement
@@ -197,7 +197,8 @@ export async function getServerSideProps() {
             ]),
             ]
             return options
-        } })
+        } },
+)
     const { code } = markdown
     return {
         props: {
