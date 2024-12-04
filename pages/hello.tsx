@@ -178,7 +178,7 @@ export async function getStaticProps() {
                     [remarkToc,{ tight: true }],
                     remarkSlug,
                     [
-                        remarkCodeHike,
+                        //remarkCodeHike,
                         {
                         lineNumbers: true,
                         showCopyButton: true,
