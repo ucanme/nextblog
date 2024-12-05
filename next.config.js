@@ -8,9 +8,6 @@ const nextConfig= {
     },
     distDir: "build",
     transpilePackages: ['@code-hike/mdx'],
-    experimental: {
-        optimizePackageImports: ['@code-hike/mdx'],
-    },
 }
 
 module.exports = nextConfig

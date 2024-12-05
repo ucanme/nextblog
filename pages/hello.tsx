@@ -177,12 +177,14 @@ export async function getServerSideProps() {
                     remarkGfm,
                     [remarkToc,{ tight: true }],
                     remarkSlug,
-                    [
-                        remarkCodeHike,
-                        {
-                        lineNumbers: true,
-                        showCopyButton: true,
-            }]]
+                    // [
+                    //     remarkCodeHike,
+                    //     {
+                    //         lineNumbers: true,
+                    //         showCopyButton: true,
+                    //     }
+                    // ]
+                ]
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? [
                             [
