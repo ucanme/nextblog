@@ -7,9 +7,10 @@ const nextConfig= {
         styledComponents: true
     },
     distDir: "build",
-    output: "standalone",
     transpilePackages: ['@code-hike/mdx'],
-
+    experimental: {
+        optimizePackageImports: ['@code-hike/mdx'],
+    },
 }
 
 module.exports = nextConfig
