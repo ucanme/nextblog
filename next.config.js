@@ -7,10 +7,7 @@ const nextConfig= {
         styledComponents: true
     },
     distDir: "build",
-    experimental: {
-        esbuildExternals: ['@code - hike/mdx/dist/components.cjs.js']
-    }
-
+    serverExternalPackages: ['@code-hike/mdx']
 }
 
 module.exports = nextConfig
