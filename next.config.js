@@ -8,7 +8,8 @@ const nextConfig= {
     },
     distDir: "build",
     output: "standalone",
-    serverExternalPackages: ['@code-hike/mdx']
+    transpilePackages: ['@code-hike/mdx'],
+
 }
 
 module.exports = nextConfig
