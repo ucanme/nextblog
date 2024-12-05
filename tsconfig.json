@@ -22,8 +22,9 @@
       "@/root/*": [
         "./*"
       ],
-      "@code-hike/mdx": ["node_modules/@code-hike/mdx/dist/*"]
-
+      "@code-hike/mdx": [
+        "node_modules/@code-hike/mdx/dist/*"
+      ]
     },
     "incremental": true,
     "plugins": [
