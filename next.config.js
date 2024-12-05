@@ -6,7 +6,7 @@ const nextConfig= {
         // Enables the styled-components SWC transform
         styledComponents: true
     },
-    distDir: "build",
+    distDir: "./",
     serverExternalPackages: ['@code-hike/mdx']
 }
 
