@@ -177,13 +177,18 @@ export async function getServerSideProps() {
                     remarkGfm,
                     [remarkToc,{ tight: true }],
                     remarkSlug,
-                    // [
-                    //     remarkCodeHike,
-                    //     {
-                    //         lineNumbers: true,
-                    //         showCopyButton: true,
-                    //     }
-                    // ]
+                    [
+                        remarkCodeHike,
+                    {
+                        lineNumbers: false,
+                        showCopyButton: false,
+                        theme: "dark-plus",
+                        skipLanguages: ["mermaid"],
+                        staticMediaQuery: "not screen, (max-width: 768px)",
+                        autoImport: true,
+                        autoLink: false,
+                    },
+                    ]
                 ]
             options.rehypePlugins = [
                 ...(options.rehypePlugins ?? [
