@@ -11,7 +11,7 @@
   "dependencies": {
     "@code-hike/mdx": "^0.9.1-next.4",
     "@jsdevtools/rehype-toc": "^3.0.2",
-    "@mdx-js/esbuild": "^2.0.0",
+    "@mdx-js/esbuild": "^2.3.0",
     "@nextui-org/react": "^2.2.9",
     "@silvenon/remark-smartypants": "^2.0.0",
     "@tailwindcss/typography": "^0.5.10",
