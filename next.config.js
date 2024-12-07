@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig= {
-    swcMinify: true,
+    swcMinify: false,
     reactStrictMode: true,
     compiler: {
         // Enables the styled-components SWC transform
