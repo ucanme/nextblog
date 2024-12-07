@@ -20,7 +20,7 @@
     "framer-motion": "^11.5.6",
     "fs": "^0.0.1-security",
     "mdx-bundler": "10.0.1",
-    "next": "^15.0.4",
+    "next": "^14.0.4",
     "next-themes": "^0.2.1",
     "pnpapi": "^0.0.0",
     "react": "^18.3.1",
