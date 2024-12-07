@@ -187,7 +187,7 @@ export async function getServerSideProps() {
                         theme: "dark-plus",
                         skipLanguages: ["mermaid"],
                         staticMediaQuery: "not screen, (max-width: 768px)",
-                        autoImport: true,
+                        autoImport: false,
                         autoLink: false,
                     },
                     ]
