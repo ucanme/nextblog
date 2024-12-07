@@ -4,6 +4,8 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import  {Options,ProcessorOptions} from '@mdx-js/esbuild/lib/index'
 import fs from 'fs'
 import "@code-hike/mdx/dist/index.css"
+import { CH } from "@code-hike/mdx/components"
+
 
 import rehypeCodeTitles from 'rehype-code-titles'
 // // import rehypeImagePlaceholder from 'rehype-image-placeholder'
