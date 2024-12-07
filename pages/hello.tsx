@@ -182,12 +182,12 @@ export async function getServerSideProps() {
                     [
                         remarkCodeHike,
                     {
-                        lineNumbers: false,
-                        showCopyButton: false,
+                        lineNumbers: true,
+                        showCopyButton: true,
                         theme: "dark-plus",
                         skipLanguages: ["mermaid"],
                         staticMediaQuery: "not screen, (max-width: 768px)",
-                        autoImport: false,
+                        autoImport: true,
                         autoLink: false,
                     },
                     ]
