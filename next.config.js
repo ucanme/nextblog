@@ -8,10 +8,6 @@ const nextConfig= {
     },
     distDir: "build",
     transpilePackages: ['@code-hike/mdx'],
-    webpack: (config) => {
-        config.externals.push('@code-hike/mdx');
-        return config;
-    },
 }
 
 module.exports = nextConfig
